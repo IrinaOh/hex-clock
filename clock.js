@@ -7,7 +7,7 @@ function time(){
 	var h = now.getHours();
 	var m = now.getMinutes();
 	var s = now.getSeconds();
-	var color = "#" + h + m + s;
+	
 
 	// Format hours, minutes and seconds
 	if (h < 10) {
@@ -19,8 +19,10 @@ function time(){
     if (s < 10) {
         s = "0" + s;
     }
-	document.getElementById("clock").innerHTML = "#" + h + m + s;
-	document.body.style.background = color 
+
+    var color = "#" + h + m + s;
+	document.getElementById("clock").innerHTML = color;
+	document.body.style.background = color;
 }
 
 //This is the key to making the clock function.
